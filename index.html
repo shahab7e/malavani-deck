@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ملوانی در Polygons</title>
+<title>ملوانی در Polygons | معرفی ساده</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="سند معرفی بخش ملوانی Polygons برای سرمایه‌گذار">
 <style>
@@ -85,6 +85,10 @@ svg.i{width:18px;height:18px;stroke:currentColor;stroke-width:1.75;fill:none;str
   background:var(--sheet);border-radius:var(--r-xl);box-shadow:var(--shadow-raised);padding:20px 16px;position:relative;overflow:hidden}
 .sheet>*{position:relative}
 
+.more{position:fixed;inset-inline:0;bottom:calc(76px + env(safe-area-inset-bottom));display:flex;justify-content:center;pointer-events:none;z-index:5;opacity:0;transform:translateY(6px);transition:opacity 180ms var(--ease-out),transform 180ms var(--ease-out)}
+.more.on{opacity:1;transform:none}
+.more span{display:inline-flex;gap:6px;align-items:center;font-size:12px;line-height:18px;font-weight:700;padding:6px 12px;border-radius:99px;background:var(--primary);color:var(--on-primary);box-shadow:var(--shadow-raised)}
+@media (prefers-reduced-motion:reduce){.more{transition:opacity 120ms;transform:none}}
 /* ---------- footer ---------- */
 .foot{display:flex;align-items:center;gap:12px;padding:6px 16px calc(12px + env(safe-area-inset-bottom))}
 .nav{width:44px;height:44px;border-radius:var(--r-md);display:grid;place-items:center;
@@ -205,6 +209,11 @@ svg.i{width:18px;height:18px;stroke:currentColor;stroke-width:1.75;fill:none;str
 .track-bar i{display:block;height:100%;border-radius:99px;background:var(--primary)}
 .track-bar.ok i{background:var(--ok)}
 
+.card.big{padding:18px}
+.num-big{font-size:34px;line-height:1.2;font-weight:800;color:var(--sky-text)}
+.term{background:var(--sunken);border-radius:var(--r-md);padding:12px 14px;font-size:13px;line-height:22px;color:var(--text-2)}
+.term b{color:var(--text)}
+.h2{max-width:34ch}
 /* cover */
 .cover{align-items:flex-start;gap:18px}
 .hex{position:absolute!important;inset-inline-end:20px;top:20px;width:clamp(84px,26vw,150px);pointer-events:none;color:var(--line)}
@@ -238,9 +247,9 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
     <section class="slide" data-title="معرفی">
       <div class="sheet cover">
         <div class="hex" aria-hidden="true"><svg viewBox="-1 -1 26.64 30.46"><path d="M12.32,28.46L0,21.34V7.11L12.32,0l12.32,7.11v14.23l-12.32,7.11Z"/></svg></div>
-        <span class="eyebrow rv" style="--i:0">سند معرفی برای سرمایه‌گذار</span>
+        <span class="eyebrow rv" style="--i:0">معرفی برای سرمایه‌گذار</span>
         <h1 class="h1 rv" style="--i:1">ملوانی در Polygons</h1>
-        <p class="lead rv" style="--i:2">بستر شفاف حمل دریایی کالا از امارات به ایران؛ بازرگان، لنج‌دار و بیمه‌گر در یک پرونده.</p>
+        <p class="lead rv" style="--i:2">بازاری آنلاین برای حمل کالا با لنج از امارات به ایران؛ بازرگان، لنج‌دار و بیمه‌گر در یک پرونده.</p>
         <div class="chips rv" style="--i:3">
           <span class="chip sk">سفارش با آفر</span>
           <span class="chip sk">تجمیع بار</span>
@@ -253,70 +262,99 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
       </div>
     </section>
 
-    <!-- 2 · problem -->
-    <section class="slide" data-title="مسئله">
+    <!-- 2 · what is malavani -->
+    <section class="slide" data-title="ملوانی چیست؟">
       <div class="sheet">
-        <span class="eyebrow rv">مسئله</span>
-        <h2 class="h2 rv" style="--i:1">حمل ملوانی امروز تلفنی است و بر پایه‌ی آشنایی</h2>
+        <span class="eyebrow rv">اول، ملوانی چیست؟</span>
+        <h2 class="h2 rv" style="--i:1">ملوانی یعنی رساندن کالا با لنج از امارات به بنادر جنوب ایران</h2>
+        <p class="lead rv" style="--i:2">لنج قایق چوبی سنتی خلیج فارس است. بازرگان کالایش را در امارات (مثل دبی و جبل‌علی) دارد و باید آن را به ایران برساند. سه نفر در این کار نقش دارند:</p>
         <div class="grid g3">
-          <div class="card rv" style="--i:2"><span class="tag t-sky" style="align-self:flex-start">بازرگان</span><p class="row-title">قیمت قابل مقایسه نیست</p><p class="body">برای حمل و بیمه با چند نفر جدا تماس می‌گیرد.</p></div>
-          <div class="card rv" style="--i:3"><span class="tag t-sky" style="align-self:flex-start">ملوان</span><p class="row-title">بار را از آشنا می‌گیرد</p><p class="body">به دلال وابسته است و گاهی لنج نیمه‌خالی حرکت می‌کند.</p></div>
-          <div class="card rv" style="--i:4"><span class="tag t-neutral" style="align-self:flex-start">هر دو</span><p class="row-title">اعتماد ثبت نمی‌شود</p><p class="body">سابقه‌ای نیست و مدارک در پیام‌رسان‌ها پخش است.</p></div>
-        </div>
-        <div class="strip rv" style="--i:5">
-          <svg class="i" viewBox="0 0 24 24" style="margin-top:3px"><path d="M12 8v4M12 16h.01"/><circle cx="12" cy="12" r="10"/></svg>
-          <div>اعتماد امروز با پول خریده می‌شود: «۶۵۰ به‌جای ۶۰۰، چون واسطه ضمانت می‌کند»<small>به گفته‌ی یک کارشناس حمل ملوانی</small></div>
+          <div class="card rv" style="--i:3"><span class="tag t-sky" style="align-self:flex-start">بازرگان</span><p class="row-title">صاحب کالا</p><p class="body">می‌خواهد بارش سالم، ارزان و به‌موقع برسد. مشتری اصلی ماست.</p></div>
+          <div class="card rv" style="--i:4"><span class="tag t-sky" style="align-self:flex-start">ملوان</span><p class="row-title">لنج‌دار یا نماینده‌ی او</p><p class="body">بار را با لنج می‌رساند و برای این کار قیمت می‌دهد. ما به او «ملوان» می‌گوییم.</p></div>
+          <div class="card rv" style="--i:5"><span class="tag t-neutral" style="align-self:flex-start">شرکت بیمه</span><p class="row-title">بیمه‌ی بار</p><p class="body">اگر بازرگان بخواهد، بار را در برابر آسیب بیمه می‌کند.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 3 · solution -->
+    <!-- 3 · problem -->
+    <section class="slide" data-title="مسئله">
+      <div class="sheet">
+        <span class="eyebrow rv">مسئله</span>
+        <h2 class="h2 rv" style="--i:1">امروز همه‌چیز تلفنی است و به آشنایی بستگی دارد</h2>
+        <div class="grid g3">
+          <div class="card rv" style="--i:2"><span class="tag t-sky" style="align-self:flex-start">بازرگان</span><p class="row-title">قیمت قابل مقایسه نیست</p><p class="body">برای حمل و بیمه باید با چند نفر جدا تماس بگیرد و قیمت‌ها را خودش کنار هم بگذارد.</p></div>
+          <div class="card rv" style="--i:3"><span class="tag t-sky" style="align-self:flex-start">ملوان</span><p class="row-title">بار را از آشنا می‌گیرد</p><p class="body">برای پیدا کردن بار به آشنا و دلال وابسته است و گاهی لنج نیمه‌خالی حرکت می‌کند.</p></div>
+          <div class="card rv" style="--i:4"><span class="tag t-neutral" style="align-self:flex-start">هر دو</span><p class="row-title">اعتماد ثبت نمی‌شود</p><p class="body">قبل از تحویل بار ریسک هست، سابقه‌ی طرف مقابل جایی ثبت نمی‌شود و مدارک در پیام‌رسان‌ها پخش است.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · solution -->
     <section class="slide" data-title="راه‌حل">
       <div class="sheet">
         <span class="eyebrow rv">راه‌حل</span>
-        <h2 class="h2 rv" style="--i:1">یک پرونده از ثبت سفارش تا تحویل بار</h2>
+        <h2 class="h2 rv" style="--i:1">ما این بازار را آنلاین کرده‌ایم: یک پرونده از ثبت سفارش تا تحویل بار</h2>
         <div class="steps h rv" style="--i:2">
           <div class="step"><div class="bub">۱</div><div class="t"><p class="row-title">بازرگان سفارش می‌گذارد</p><p class="body">یک بار، برای همه‌ی ملوان‌ها</p></div></div>
-          <div class="step"><div class="bub">۲</div><div class="t"><p class="row-title">ملوان‌ها آفر می‌دهند</p><p class="body">قلم‌به‌قلم و با زمان تحویل</p></div></div>
+          <div class="step"><div class="bub">۲</div><div class="t"><p class="row-title">ملوان‌ها آفر می‌دهند</p><p class="body">آفر یعنی پیشنهاد قیمت، با زمان تحویل</p></div></div>
           <div class="step"><div class="bub">۳</div><div class="t"><p class="row-title">بازرگان انتخاب می‌کند</p><p class="body">مقایسه، چانه‌زنی، پذیرش</p></div></div>
           <div class="step"><div class="bub soft">۴</div><div class="t"><p class="row-title">حمل روی همان پرونده</p><p class="body">رهگیری، اسناد، بیمه، امتیاز</p></div></div>
         </div>
         <div class="grid g3">
-          <div class="card tint rv" style="--i:3"><p class="row-title">سفارش با آفر</p><p class="body">یک‌به‌چند؛ بازرگان بین آفرها انتخاب می‌کند.</p></div>
-          <div class="card tint rv" style="--i:4"><p class="row-title">تجمیع بار</p><p class="body">ملوان ظرفیت خالی لنج را منتشر می‌کند.</p></div>
-          <div class="card tint rv" style="--i:5"><p class="row-title">بیمه بار</p><p class="body">اختیاری، روی همان پرونده.</p></div>
+          <div class="card tint rv" style="--i:3"><p class="row-title">سفارش با آفر</p><p class="body">بازرگان بار را اعلام می‌کند و بین چند قیمت انتخاب می‌کند.</p></div>
+          <div class="card tint rv" style="--i:4"><p class="row-title">تجمیع بار</p><p class="body">ملوان جای خالی لنجش را اعلام می‌کند و بازرگان آن را رزرو می‌کند.</p></div>
+          <div class="card tint rv" style="--i:5"><p class="row-title">بیمه بار</p><p class="body">اختیاری است و از همان پرونده درخواست می‌شود.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 4 · order -->
-    <section class="slide" data-title="سفارش">
+    <!-- 5 · order -->
+    <section class="slide" data-title="ثبت سفارش">
       <div class="sheet">
-        <span class="eyebrow rv">سفارش با آفر</span>
+        <span class="eyebrow rv">سفارش با آفر · ۱</span>
         <h2 class="h2 rv" style="--i:1">بازرگان فقط می‌گوید بار چیست، کجاست و کجا می‌خواهد</h2>
-        <div class="chips rv" style="--i:2">
-          <span class="chip">نوع کالا، حجم و وزن</span>
-          <span class="chip">محل بار</span>
-          <span class="chip">سطح تحویل</span>
+        <div class="grid g3">
+          <div class="card rv" style="--i:2"><div class="num-big">۱</div><p class="row-title">بار چیست؟</p><p class="body">نوع کالا، حجم و وزن. نوع کالا مهم است: برنج سنگین است و لباسشویی حجیم.</p></div>
+          <div class="card rv" style="--i:3"><div class="num-big">۲</div><p class="row-title">بار کجاست؟</p><p class="body">جبل‌علی، فری‌زون یا سرزمین اصلی امارات؛ می‌تواند چند جا باشد. محل بار روی هزینه اثر دارد، تا حدود ۱۰۰۰ تا ۲۰۰۰ درهم به گفته‌ی کارشناس.</p></div>
+          <div class="card rv" style="--i:4"><div class="num-big">۳</div><p class="row-title">کجا تحویل می‌گیرد؟</p><p class="body">سه سطح تحویل دارد که در اسلاید بعد می‌بینید.</p></div>
         </div>
-        <div class="levels rv" style="--i:3">
-          <div class="lvl"><div class="bars"><i class="on"></i><i></i><i></i></div><p class="row-title">ورودی گمرک ایران</p><p class="body">حمل و تخلیه؛ ترخیص با بازرگان.</p></div>
-          <div class="lvl"><div class="bars"><i class="on"></i><i class="on"></i><i></i></div><p class="row-title">درِ خروج گمرک</p><p class="body">به‌علاوه‌ی ترخیص توسط ملوان.</p></div>
-          <div class="lvl"><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i></div><p class="row-title">انبار مشتری</p><p class="body">به‌علاوه‌ی حمل داخلی تا انبار.</p></div>
-        </div>
-        <div class="grid g2 tight">
-          <div class="card rv" style="--i:4"><span class="tag t-sky" style="align-self:flex-start">حالت الف</span><p class="body">بازرگان نقش ملوانی دارد؛ فقط حمل می‌خواهد و خودش اظهار می‌کند.</p></div>
-          <div class="card rv" style="--i:5"><span class="tag t-sky" style="align-self:flex-start">حالت ب</span><p class="body">کالا با مجوز ملوان وارد می‌شود؛ کالا همچنان مال بازرگان است.</p></div>
-        </div>
-        <p class="meta rv" style="--i:6">محل بار می‌تواند جبل‌علی، فری‌زون یا سرزمین اصلی امارات باشد. بندر خروج و ورود را ملوان تعیین می‌کند، چون هر لنج در یک بندر ایران ثبت شده است.</p>
+        <p class="meta rv" style="--i:5">بندر خروج و ورود را ملوان تعیین می‌کند، چون هر لنج در یک بندر ایران ثبت شده است. زمان تحویل را هم از بازرگان نمی‌پرسیم؛ ملوان در آفرش می‌گوید.</p>
       </div>
     </section>
 
-    <!-- 5 · offers -->
-    <section class="slide" data-title="آفر">
+    <!-- 6 · levels -->
+    <section class="slide" data-title="سطح تحویل">
       <div class="sheet">
-        <span class="eyebrow rv">آفر شفاف</span>
-        <h2 class="h2 rv" style="--i:1">آفر قلم‌به‌قلم، قابل مقایسه، با زمان تحویل اجباری</h2>
+        <span class="eyebrow rv">سفارش با آفر · ۲</span>
+        <h2 class="h2 rv" style="--i:1">بازرگان انتخاب می‌کند ملوان تا کجا کار را انجام بدهد</h2>
+        <div class="levels rv" style="--i:2">
+          <div class="lvl"><div class="bars"><i class="on"></i><i></i><i></i></div><p class="row-title">ورودی گمرک ایران</p><p class="body">فقط حمل و تخلیه. ترخیص با خود بازرگان است.</p></div>
+          <div class="lvl"><div class="bars"><i class="on"></i><i class="on"></i><i></i></div><p class="row-title">درِ خروج گمرک</p><p class="body">به‌علاوه‌ی ترخیص که ملوان انجام می‌دهد.</p></div>
+          <div class="lvl"><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i></div><p class="row-title">انبار مشتری</p><p class="body">به‌علاوه‌ی حمل داخلی تا انبار بازرگان.</p></div>
+        </div>
+        <div class="term rv" style="--i:3"><b>ترخیص:</b> انجام کارهای گمرکی (پرداخت عوارض و گرفتن مجوز خروج) تا کالا آزاد شود. هر سطح شامل کارهای سطح قبل هم هست. این یک ترجیح است و ملوان‌ها بر همان مبنا آفر می‌دهند.</div>
+      </div>
+    </section>
+
+    <!-- 7 · modes -->
+    <section class="slide" data-title="حالت مجوز">
+      <div class="sheet">
+        <span class="eyebrow rv">سفارش با آفر · ۳</span>
+        <h2 class="h2 rv" style="--i:1">بازرگان یا خودش مجوز ملوانی دارد یا از مجوز ملوان استفاده می‌کند</h2>
+        <p class="lead rv" style="--i:2">برای وارد کردن کالا به ایران باید «نقش ملوانی» (مجوز) داشت. بازرگان‌ها از دو حال خارج نیستند:</p>
+        <div class="grid g2">
+          <div class="card big rv" style="--i:3"><span class="tag t-sky" style="align-self:flex-start">حالت الف</span><p class="row-title">مجوز ملوانی دارم</p><p class="body">فقط حمل می‌خواهد و خودش کالا را اظهار می‌کند (به گمرک معرفی می‌کند). عوارض رسمی گمرک را مستقیم می‌پردازد و داخل آفر نیست.</p></div>
+          <div class="card big rv" style="--i:4"><span class="tag t-sky" style="align-self:flex-start">حالت ب</span><p class="row-title">مجوز ندارم</p><p class="body">کالا با مجوز ملوان وارد می‌شود، ولی کالا همچنان مال بازرگان است. ملوان حقوق ورودی (عوارض گمرکی)، سود بازرگانی و کارمزدش را هم در آفر می‌آورد.</p></div>
+        </div>
+        <p class="meta rv" style="--i:5">در حالت ب سطح «ورودی گمرک» فعال نیست، چون ترخیص با ملوان است و بازرگان نمی‌تواند خودش انجامش بدهد.</p>
+      </div>
+    </section>
+
+    <!-- 8 · offers -->
+    <section class="slide" data-title="مقایسه آفر">
+      <div class="sheet">
+        <span class="eyebrow rv">آفر شفاف · ۱</span>
+        <h2 class="h2 rv" style="--i:1">بازرگان آفرها را کنار هم می‌بیند، مقایسه می‌کند و انتخاب می‌کند</h2>
         <div class="split">
           <div class="grid" style="gap:12px">
             <div class="seg rv" style="--i:2"><span class="on">ارزان‌ترین</span><span>سریع‌ترین</span></div>
@@ -331,40 +369,58 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
             <p class="meta rv" style="--i:5">نمونه‌ی نمایشی: برگرفته از مثال کارشناس، نه آمار بازار.</p>
           </div>
           <div class="pts">
-            <div class="pt rv" style="--i:3"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">جمع خودکار</p><p class="body">اقلام آفر خودکار جمع می‌شوند؛ جمع دستی وارد نمی‌شود.</p></div></div>
-            <div class="pt rv" style="--i:4"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">زمان تحویل در آفر</p><p class="body">بازرگان زمان را نمی‌داند؛ از ملوان می‌پرسیم.</p></div></div>
-            <div class="pt rv" style="--i:5"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">چانه‌زنی داخل پرونده</p><p class="body">پیام، پیوست و پیشنهاد متقابل؛ پذیرش خودکار نیست.</p></div></div>
+            <div class="pt rv" style="--i:3"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">زمان تحویل در آفر</p><p class="body">بازرگان زمان حمل را نمی‌داند؛ از ملوان می‌پرسیم تا بتواند «۱۰ روزه با قیمت بالا» را با «۳ هفته با قیمت پایین» مقایسه کند.</p></div></div>
+            <div class="pt rv" style="--i:4"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">چانه‌زنی داخل پرونده</p><p class="body">پیام، پیوست و پیشنهاد قیمت متقابل؛ پذیرش خودکار نداریم و ملوان می‌تواند آفرش را ویرایش کند یا پس بگیرد.</p></div></div>
+            <div class="pt rv" style="--i:5"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">ملوان معتبر دیده می‌شود</p><p class="body">نشان «ضمانت پلتفرم» برای ملوان‌های تأییدشده و امتیاز سفارش‌های قبلی کنار هر آفر است. با پذیرش یک آفر، بقیه «انتخاب نشد» می‌شوند.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6 · capacity -->
+    <!-- 9 · offer items -->
+    <section class="slide" data-title="اقلام آفر">
+      <div class="sheet">
+        <span class="eyebrow rv">آفر شفاف · ۲</span>
+        <h2 class="h2 rv" style="--i:1">آفر از چند قلم ساخته می‌شود و جمعش را سیستم حساب می‌کند</h2>
+        <div class="grid g2">
+          <div class="card rv" style="--i:2"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">هزینه داخل امارات</p><span class="tag t-ok">همیشه</span></div><p class="body">انتقال بار از محلی که هست تا بندر خروج.</p></div>
+          <div class="card rv" style="--i:3"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">هزینه لنج با تخلیه</p><span class="tag t-ok">همیشه</span></div><p class="body">خود حمل با لنج و تخلیه، به‌صورت یک عدد کلی. تخلیه عمداً جدا نیست، چون جدا بودنش سر دعوا می‌شود.</p></div>
+          <div class="card rv" style="--i:4"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">هزینه ترخیص</p><span class="tag t-sky">از «درِ خروج گمرک»</span></div><p class="body">انجام کارهای گمرکی برای کل بار.</p></div>
+          <div class="card rv" style="--i:5"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">هزینه حمل تا انبار</p><span class="tag t-sky">فقط «انبار مشتری»</span></div><p class="body">حمل از گمرک تا انبار بازرگان.</p></div>
+          <div class="card rv" style="--i:6"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">حقوق ورودی، سود بازرگانی و کارمزد</p><span class="tag t-neutral">فقط حالت ب</span></div><p class="body">وقتی کالا با مجوز ملوان وارد می‌شود.</p></div>
+          <div class="card rv" style="--i:7"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><p class="row-title">زمان تحویل</p><span class="tag t-attn">اجباری</span></div><p class="body">بدون آن آفر ارسال نمی‌شود.</p></div>
+        </div>
+        <p class="meta rv" style="--i:8">جمع آفر دستی وارد نمی‌شود؛ سیستم اقلام را جمع می‌زند.</p>
+      </div>
+    </section>
+
+    <!-- 10 · capacity -->
     <section class="slide" data-title="تجمیع بار">
       <div class="sheet">
         <span class="eyebrow rv">تجمیع بار</span>
-        <h2 class="h2 rv" style="--i:1">لنج خالی نرود؛ بار زودتر راه بیفتد</h2>
+        <h2 class="h2 rv" style="--i:1">لنج نیمه‌خالی نرود؛ بار زودتر راه بیفتد</h2>
+        <p class="lead rv" style="--i:2">مثل تاکسی خطی: لنج مسیر و زمان حرکتش را دارد و جای خالی‌اش را اعلام می‌کند.</p>
         <div class="split">
-          <div class="offer rv" style="--i:2">
+          <div class="offer rv" style="--i:3">
             <div class="top"><span class="row-title">جبل‌علی ← بندرعباس</span><span class="tag t-ok">باز</span></div>
             <div class="meter"><div class="l"><span>حجم</span><span class="num">۷۰٪ پر</span></div><div class="track-bar"><i style="width:70%"></i></div></div>
             <div class="meter"><div class="l"><span>وزن</span><span class="num">۵۵٪ پر</span></div><div class="track-bar ok"><i style="width:55%"></i></div></div>
             <p class="meta">نمونه‌ی نمایشی</p>
           </div>
           <div class="pts">
-            <div class="pt rv" style="--i:3"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">ملوان ظرفیت منتشر می‌کند</p><p class="body">بازه‌ی حرکت و قیمت هر CBM یا هر کانتینر.</p></div></div>
-            <div class="pt rv" style="--i:4"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">بازرگان لنجِ نزدیک به پر را می‌گیرد</p><p class="body">لنج زودتر راه می‌افتد؛ سود دوطرفه است.</p></div></div>
-            <div class="pt rv" style="--i:5"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">ملوان کامل یا بخشی می‌پذیرد</p><p class="body">«۶ کانتینر نه، ۳ تا»؛ ظرفیت از سقف رد نمی‌شود.</p></div></div>
+            <div class="pt rv" style="--i:3"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">ملوان ظرفیت منتشر می‌کند</p><p class="body">بازه‌ی حرکت و قیمت هر متر مکعب (برای خرده‌بار) یا هر کانتینر ۲۰ و ۴۰ فوت. خرده‌بار یعنی باری که یک کانتینر کامل نیست.</p></div></div>
+            <div class="pt rv" style="--i:4"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">بازرگان لنجِ نزدیک به پر را می‌گیرد</p><p class="body">این لنج زودتر راه می‌افتد. هم وزن و هم حجم حساب می‌شود، چون ظرفیت فقط «چند کانتینر» نیست.</p></div></div>
+            <div class="pt rv" style="--i:5"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><p class="row-title">ملوان کامل یا بخشی می‌پذیرد</p><p class="body">«۶ کانتینر نه، ۳ تا». ظرفیت هرگز از سقف رد نمی‌شود. سود دوطرفه است: بازرگان زودتر می‌فرستد و ملوان خالی نمی‌رود.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7 · file -->
-    <section class="slide" data-title="پرونده">
+    <!-- 11 · tracking -->
+    <section class="slide" data-title="پیگیری بار">
       <div class="sheet">
-        <span class="eyebrow rv">بعد از پذیرش</span>
-        <h2 class="h2 rv" style="--i:1">رهگیری با خوداظهاری ملوان، بدون «بارم کجاست؟»</h2>
+        <span class="eyebrow rv">بعد از پذیرش · ۱</span>
+        <h2 class="h2 rv" style="--i:1">بازرگان لازم نیست مدام بپرسد «بارم کجاست؟»</h2>
         <div class="steps mini rv" style="--i:2">
           <div class="step"><div class="bub done"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div class="t"><p class="row-title">تحویل بار</p></div></div>
           <div class="step"><div class="bub done"><svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div class="t"><p class="row-title">انتقال به بندر</p></div></div>
@@ -372,51 +428,63 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
           <div class="step"><div class="bub idle">۴</div><div class="t"><p class="row-title">در دریا</p></div></div>
           <div class="step"><div class="bub idle">۵</div><div class="t"><p class="row-title">رسیدن و تخلیه</p></div></div>
         </div>
-        <p class="meta rv" style="--i:3">بسته به سطح تحویل، مراحل ترخیص، خروج از گمرک و تحویل در انبار هم اضافه می‌شود. هر مرحله با ساعت ثبت می‌شود.</p>
-        <div class="grid g3">
-          <div class="card rv" style="--i:4"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></svg></div><p class="row-title">اسناد یک‌جا</p><p class="body">مانیفست، بیجک، رسید بار، سند لنج، فاکتور خرید.</p></div>
-          <div class="card rv" style="--i:5"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><p class="row-title">بیمه اختیاری</p><p class="body">درخواست از سکو و صدور توسط کارشناس شرکت بیمه.</p></div>
-          <div class="card rv" style="--i:6"><div class="ico attn"><svg class="i" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></div><p class="row-title">امتیاز بعد از تحویل</p><p class="body">بازرگان ۱ تا ۵ می‌دهد و سابقه‌ی ملوان می‌سازد.</p></div>
+        <div class="grid g2">
+          <div class="card rv" style="--i:3"><p class="row-title">ملوان خودش اعلام می‌کند</p><p class="body">هر مرحله با ساعت ثبت می‌شود و برای هر دو طرف سابقه می‌ماند. بسته به سطح تحویل، مراحل ترخیص، خروج از گمرک و تحویل در انبار هم اضافه می‌شود.</p></div>
+          <div class="card rv" style="--i:4"><p class="row-title">اول اطلاعات لنج</p><p class="body">تا ملوان نام لنج، ناخدا، شماره ثبت و شماره امور دریانوردی را وارد نکند، نمی‌تواند مرحله‌ای ثبت کند. بازرگان با این شماره‌ها ثبت آماری و بیمه انجام می‌دهد.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 8 · why -->
+    <!-- 12 · docs / insurance / rating -->
+    <section class="slide" data-title="اسناد و بیمه">
+      <div class="sheet">
+        <span class="eyebrow rv">بعد از پذیرش · ۲</span>
+        <h2 class="h2 rv" style="--i:1">مدارک، بیمه و امتیاز همه روی همین پرونده‌اند</h2>
+        <div class="grid g3">
+          <div class="card rv" style="--i:2"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></svg></div><p class="row-title">اسناد یک‌جا</p><p class="body">مانیفست (فهرست بار و مشخصات لنج)، بیجک (برگه‌ی حمل تا انبار)، رسید بار، سند لنج و فاکتور خرید؛ هر کدام جای مشخص دارد.</p></div>
+          <div class="card rv" style="--i:3"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><p class="row-title">بیمه اختیاری</p><p class="body">به نام صاحب کالا. از سکو درخواست می‌شود و کارشناس شرکت بیمه صادر یا رد می‌کند، یا بازرگان بیمه‌نامه‌ی خودش را ثبت می‌کند.</p></div>
+          <div class="card rv" style="--i:4"><div class="ico attn"><svg class="i" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></div><p class="row-title">تأیید تحویل و امتیاز</p><p class="body">بازرگان رسیدن بار را تأیید می‌کند و به ملوان ۱ تا ۵ می‌دهد. امتیاز روی پروفایل ملوان می‌ماند.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 · why -->
     <section class="slide" data-title="مزیت">
       <div class="sheet">
         <span class="eyebrow rv">چرا کار می‌کند</span>
         <h2 class="h2 rv" style="--i:1">اعتماد و سابقه فقط داخل سکو ساخته می‌شود</h2>
         <div class="grid g3">
-          <div class="card rv" style="--i:2"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><p class="row-title">اعتماد، نه فقط قیمت</p><p class="body">نشان «ضمانت پلتفرم» و امتیاز هر سفارش؛ سابقه با ملوان می‌ماند.</p></div>
-          <div class="card rv" style="--i:3"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M3 12h18M12 3l9 9-9 9"/></svg></div><p class="row-title">سود دوطرفه</p><p class="body">بازرگان از رقابت آفرها سود می‌برد و ملوان از بار بیشتر و لنج پر.</p></div>
-          <div class="card rv" style="--i:4"><div class="ico attn"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg></div><p class="row-title">پرونده‌ی واحد</p><p class="body">بیمه از دل همین پرونده فروخته می‌شود، پس جذب مشتری بیمه ارزان است.</p></div>
+          <div class="card rv" style="--i:2"><div class="ico ok"><svg class="i" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><p class="row-title">اعتماد، نه فقط قیمت</p><p class="body">نشان «ضمانت پلتفرم» و امتیاز هر سفارش؛ مثل برچسب اعتماد در سایت‌های مقایسه‌ی قیمت. سابقه با ملوان می‌ماند و دور شدن از سکو برایش گران می‌شود.</p></div>
+          <div class="card rv" style="--i:3"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M3 12h18M12 3l9 9-9 9"/></svg></div><p class="row-title">سود دوطرفه</p><p class="body">بازرگان از رقابت آفرها سود می‌برد و ملوان از بار بیشتر و لنج پر. تجمیع بار انگیزه‌ی اضافه می‌دهد که لنجش را همین‌جا پر کند.</p></div>
+          <div class="card rv" style="--i:4"><div class="ico attn"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg></div><p class="row-title">پرونده‌ی واحد</p><p class="body">مانیفست، بیجک، فاکتور و بیمه‌نامه یک‌جا هستند. بیمه از دل همین پرونده فروخته می‌شود، پس جذب مشتری بیمه ارزان است.</p></div>
         </div>
         <p class="body rv" style="--i:5">ساختار این بخش بر پایه‌ی مصاحبه با یک کارشناس حمل ملوانی طراحی شده است.</p>
       </div>
     </section>
 
-    <!-- 9 · revenue -->
-    <section class="slide" data-title="درآمد">
+    <!-- 14 · revenue -->
+    <section class="slide" data-title="مدل درآمد">
       <div class="sheet">
         <span class="eyebrow rv">مدل درآمد</span>
-        <h2 class="h2 rv" style="--i:1">درآمد از لحظه‌ای که سکو ارزش می‌سازد</h2>
+        <h2 class="h2 rv" style="--i:1">از عرضه‌کننده‌ها پول می‌گیریم؛ بازرگان ثبت سفارش را رایگان انجام می‌دهد</h2>
+        <p class="lead rv" style="--i:2">قاعده: پول را وقتی می‌گیریم که سکو برای طرف مقابل ارزش ساخته باشد (آفر پذیرفته شد، بار پر شد، بیمه‌نامه صادر شد).</p>
         <div class="grid g3 two">
-          <div class="card rv" style="--i:2"><div class="head" style="justify-content:space-between"><p class="row-title">کمیسیون حمل</p><span class="tag t-neutral">ملوان</span></div><p class="body">درصدی از آفر پذیرفته‌شده، بعد از تکمیل سفارش.</p></div>
-          <div class="card rv" style="--i:3"><div class="head" style="justify-content:space-between"><p class="row-title">کارمزد تجمیع بار</p><span class="tag t-neutral">ملوان</span></div><p class="body">به‌ازای هر CBM یا کانتینرِ رزرو پذیرفته‌شده.</p></div>
-          <div class="card rv" style="--i:4"><div class="head" style="justify-content:space-between"><p class="row-title">کمیسیون بیمه</p><span class="tag t-neutral">بیمه‌گر</span></div><p class="body">از هر بیمه‌نامه‌ی صادرشده، با قرارداد دوجانبه.</p></div>
-          <div class="card rv" style="--i:5"><div class="head" style="justify-content:space-between"><p class="row-title">پرداخت امانی</p><span class="tag t-neutral">بازرگان</span></div><p class="body">کارمزد نگه‌داشتن پول تا تأیید تحویل.</p></div>
-          <div class="card rv" style="--i:6"><div class="head" style="justify-content:space-between"><p class="row-title">جایگاه ویژه</p><span class="tag t-neutral">ملوان، بیمه‌گر</span></div><p class="body">ظرفیت یا پروفایل در بالای تابلو.</p></div>
-          <div class="card rv" style="--i:7"><div class="head" style="justify-content:space-between"><p class="row-title">اشتراک ملوان</p><span class="tag t-neutral">ملوان</span></div><p class="body">بسته‌ی ماهانه با گزارش و ابزار ناوگان.</p></div>
+          <div class="card rv" style="--i:3"><div class="head" style="justify-content:space-between"><p class="row-title">کمیسیون حمل</p><span class="tag t-neutral">ملوان</span></div><p class="body">درصدی از مبلغ آفر پذیرفته‌شده، بعد از تکمیل سفارش.</p></div>
+          <div class="card rv" style="--i:4"><div class="head" style="justify-content:space-between"><p class="row-title">کارمزد تجمیع بار</p><span class="tag t-neutral">ملوان</span></div><p class="body">به‌ازای هر بار که در جای خالی لنج پذیرفته می‌شود. لنج خالی بدون سکو درآمدی ندارد، پس قابل دفاع‌ترین است.</p></div>
+          <div class="card rv" style="--i:5"><div class="head" style="justify-content:space-between"><p class="row-title">کمیسیون بیمه</p><span class="tag t-neutral">شرکت بیمه</span></div><p class="body">درصدی از هر بیمه‌نامه‌ی صادرشده، با قرارداد دوجانبه.</p></div>
+          <div class="card rv" style="--i:6"><div class="head" style="justify-content:space-between"><p class="row-title">پرداخت امانی</p><span class="tag t-neutral">بازرگان</span></div><p class="body">پول تا تأیید تحویل نزد سکو می‌ماند و بعد آزاد می‌شود؛ کارمزد کوچکی دارد.</p></div>
+          <div class="card rv" style="--i:7"><div class="head" style="justify-content:space-between"><p class="row-title">جایگاه ویژه</p><span class="tag t-neutral">ملوان، بیمه‌گر</span></div><p class="body">برای دیده شدن بالای فهرست ظرفیت‌ها یا معرفی بیمه‌گر.</p></div>
+          <div class="card rv" style="--i:8"><div class="head" style="justify-content:space-between"><p class="row-title">اشتراک ملوان</p><span class="tag t-neutral">ملوان</span></div><p class="body">بسته‌ی ماهانه با گزارش و ابزار مدیریت ناوگان (مجموعه‌ی لنج‌ها)، به‌جای کمیسیون یا کنار آن.</p></div>
         </div>
-        <div class="strip rv" style="--i:8">
+        <div class="strip rv" style="--i:9">
           <svg class="i" viewBox="0 0 24 24" style="margin-top:3px"><path d="M12 8v4M12 16h.01"/><circle cx="12" cy="12" r="10"/></svg>
-          <div>امروز کمیسیونی گرفته نمی‌شود<small>پرداخت هنوز بیرون از سکو انجام می‌شود؛ بازرگان خدمت رایگان می‌گیرد و عرضه‌کننده پرداخت می‌کند.</small></div>
+          <div>امروز کمیسیونی گرفته نمی‌شود<small>پرداخت هنوز بیرون از سکو، مستقیم بین دو طرف انجام می‌شود. فاز پرداخت داخل سکو در نقشه‌ی راه است.</small></div>
         </div>
       </div>
     </section>
 
-    <!-- 10 · rollout -->
-    <section class="slide" data-title="فعال‌سازی">
+    <!-- 15 · rollout -->
+    <section class="slide" data-title="ترتیب فعال‌سازی">
       <div class="sheet">
         <span class="eyebrow rv">ترتیب فعال‌سازی</span>
         <h2 class="h2 rv" style="--i:1">اول بدون پرداخت داخل سکو درآمد بسازیم، بعد با پرداخت امانی تثبیت کنیم</h2>
@@ -426,12 +494,12 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
           <div class="step"><div class="bub soft">۳</div><div class="t"><p class="row-title">با پرداخت داخل سکو</p><p class="body">پرداخت امانی و داوری اختلاف.</p></div></div>
           <div class="step"><div class="bub idle">۴</div><div class="t"><p class="row-title">بعد از پایه‌ی کاربر</p><p class="body">جایگاه ویژه و اشتراک ملوان.</p></div></div>
         </div>
-        <div class="card tint rv" style="--i:3"><p class="row-title">چرا بیمه و تجمیع بار اول؟</p><p class="body">هر دو بدون پرداخت داخل سکو قابل اجرایند و دور زدنشان سخت‌تر است؛ لنج خالی و بیمه‌نامه فقط از دل سکو می‌آیند.</p></div>
+        <div class="card tint rv" style="--i:3"><p class="row-title">چرا بیمه و تجمیع بار اول؟</p><p class="body">هر دو بدون پرداخت داخل سکو قابل اجرایند و دور زدنشان سخت‌تر است؛ لنج خالی و بیمه‌نامه فقط از دل سکو می‌آیند. کمیسیون حمل روی پرداختی که بیرون از سکو انجام می‌شود قابل اجرا نیست، برای همین دیرتر می‌آید.</p></div>
       </div>
     </section>
 
-    <!-- 11 · status -->
-    <section class="slide" data-title="وضعیت">
+    <!-- 16 · status -->
+    <section class="slide" data-title="وضعیت محصول">
       <div class="sheet">
         <span class="eyebrow rv">وضعیت محصول</span>
         <h2 class="h2 rv" style="--i:1">بخش اصلی ساخته شده و روی سرور واقعی کار می‌کند</h2>
@@ -450,43 +518,58 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
             </div>
           </div>
         </div>
-        <p class="meta rv" style="--i:4">فنی: React و TypeScript، Node و SQLite؛ دسترسی‌ها و قواعد وضعیت سمت سرور، تست خودکار برای دسترسی و هم‌زمانی ظرفیت. فارسی و راست‌به‌چپ از ابتدا.</p>
+        <div class="term rv" style="--i:4"><b>ناوگان:</b> فهرست لنج‌های هر ملوان. <b>پنل مدیر:</b> جایی که تیم ما نقش‌ها و مدارک را تأیید می‌کند. <b>تعرفه‌ی رسمی:</b> نرخ مالیات و عوارض گمرکی هر کالا؛ الان عدد ساختگی نمی‌دهیم و صفحه‌ی استعلام برچسب «غیررسمی» دارد، چون منبع معتبر نرخ‌ها هنوز وارد نشده.</div>
+        <p class="meta rv" style="--i:5">فنی: React و TypeScript، Node و SQLite؛ دسترسی‌ها و قواعد وضعیت سمت سرور، تست خودکار برای دسترسی و هم‌زمانی ظرفیت. فارسی و راست‌به‌چپ از ابتدا.</p>
       </div>
     </section>
 
-    <!-- 12 · risks -->
+    <!-- 17 · risks -->
     <section class="slide" data-title="ریسک‌ها">
       <div class="sheet">
         <span class="eyebrow rv">ریسک‌ها</span>
         <h2 class="h2 rv" style="--i:1">چهار ریسک اصلی و پاسخ ما</h2>
         <div class="grid g2">
-          <div class="card rv" style="--i:2"><p class="row-title">دور زدن سکو</p><p class="body">سابقه، بیمه و اسناد فقط روی پرونده کار می‌کنند؛ پرداخت امانی در مسیر است.</p></div>
-          <div class="card rv" style="--i:3"><p class="row-title">مرغ و تخم‌مرغ</p><p class="body">شروع از یک مسیر؛ تجمیع بار سمت عرضه را بدون سفارش هم زنده نگه می‌دارد.</p></div>
-          <div class="card rv" style="--i:4"><p class="row-title">مجوز پرداخت‌یار</p><p class="body">تا آن زمان درآمد از بیمه و تجمیع بار شروع می‌شود که به پرداخت داخل سکو نیاز ندارند.</p></div>
-          <div class="card rv" style="--i:5"><p class="row-title">درستی نرخ‌های گمرکی</p><p class="body">استعلام تعرفه بنر «غیررسمی» دارد و عدد ساختگی نمی‌دهد؛ منبع معتبر فایل‌های بخشنامه است.</p></div>
+          <div class="card rv" style="--i:2"><p class="row-title">دور زدن سکو</p><p class="body">دو طرف بعد از آشنا شدن از سکو دور شوند. پاسخ: سابقه، بیمه و اسناد فقط روی پرونده کار می‌کنند و پرداخت امانی در مسیر است.</p></div>
+          <div class="card rv" style="--i:3"><p class="row-title">مرغ و تخم‌مرغ</p><p class="body">بدون ملوان آفری نیست و بدون بازرگان سفارشی. پاسخ: شروع از یک مسیر؛ تجمیع بار سمت عرضه را بدون سفارش هم زنده نگه می‌دارد.</p></div>
+          <div class="card rv" style="--i:4"><p class="row-title">مجوز پرداخت‌یار</p><p class="body">پرداخت داخل سکو به مجوز و درگاه نیاز دارد. پاسخ: تا آن زمان درآمد از بیمه و تجمیع بار شروع می‌شود که به پرداخت داخل سکو نیاز ندارند.</p></div>
+          <div class="card rv" style="--i:5"><p class="row-title">درستی نرخ‌های گمرکی</p><p class="body">نرخ‌ها به ارزش کالا بستگی دارند. پاسخ: عدد ساختگی نمی‌دهیم و منبع معتبر فایل‌های بخشنامه است.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 13 · next -->
+    <!-- 18 · next 1 -->
     <section class="slide" data-title="ادامه مسیر">
       <div class="sheet">
-        <span class="eyebrow rv">ادامه‌ی مسیر</span>
-        <h2 class="h2 rv" style="--i:1">پیشنهاد ما برای قدم‌های بعدی</h2>
+        <span class="eyebrow rv">ادامه‌ی مسیر · ۱</span>
+        <h2 class="h2 rv" style="--i:1">پیشنهاد ما برای چهار قدم اول</h2>
         <div class="grid g2">
-          <div class="card rv" style="--i:2"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۱</div><p class="row-title">پرداخت امانی تا تأیید تحویل</p></div><p class="body">مهم‌ترین قدم: اعتماد را کامل می‌کند، دور زدن را سخت می‌کند و کمیسیون را قابل اجرا.</p></div>
-          <div class="card rv" style="--i:3"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۲</div><p class="row-title">شروع از یک مسیر</p></div><p class="body">یک بندر مبدأ و یک بندر ورود را عمیق کنیم تا تراکم شکل بگیرد.</p></div>
-          <div class="card rv" style="--i:4"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۳</div><p class="row-title">معیار عمومی نشان ضمانت</p></div><p class="body">مدرک، سند لنج، سابقه و امتیاز؛ نشان اعتبار می‌سازد و فروختنی نیست.</p></div>
-          <div class="card rv" style="--i:5"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۴</div><p class="row-title">شاخص نرخ حمل هر مسیر</p></div><p class="body">میانگین بی‌نام آفرها نشان می‌دهد قیمت عادلانه کجاست.</p></div>
+          <div class="card rv" style="--i:2"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۱</div><p class="row-title">پرداخت امانی تا تأیید تحویل</p></div><p class="body">مبلغ آفر پذیرفته‌شده نزد سکو بماند و با تأیید تحویل آزاد شود. مهم‌ترین قدم است: اعتماد را کامل می‌کند، دور زدن سکو را سخت می‌کند و کمیسیون را قابل اجرا می‌کند.</p></div>
+          <div class="card rv" style="--i:3"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۲</div><p class="row-title">شروع از یک مسیر</p></div><p class="body">یک بندر مبدأ در امارات و یک بندر ورود در ایران را عمیق کنیم تا ملوان‌ها و بازرگان‌ها در همان مسیر به تراکم برسند.</p></div>
+          <div class="card rv" style="--i:4"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۳</div><p class="row-title">معیار عمومی نشان ضمانت</p></div><p class="body">مدرک مجوز، سند لنج، سابقه‌ی سفارش و امتیاز؛ معیار علنی باشد تا نشان اعتبار بسازد و فروختنی نباشد.</p></div>
+          <div class="card rv" style="--i:5"><div style="display:flex;gap:10px;align-items:center"><div class="bub" style="width:28px;height:28px;font-size:12px">۴</div><p class="row-title">شاخص نرخ حمل هر مسیر</p></div><p class="body">میانگین بی‌نام آفرهای هر مسیر به بازرگان نشان می‌دهد قیمت عادلانه کجاست؛ اعتماد می‌سازد و دلیلی است که قیمت را از سکو بگیرد.</p></div>
         </div>
-        <div class="chips rv" style="--i:6">
-          <span class="chip">سفارش مجدد</span><span class="chip">خطوط ثابت</span><span class="chip">برآورد هزینه‌ی کامل</span><span class="chip">بیمه‌ی چندگانه</span><span class="chip">پیامک و اپ موبایل</span><span class="chip no">تأمین مالی (بلندمدت)</span>
+      </div>
+    </section>
+
+    <!-- 19 · next 2 -->
+    <section class="slide" data-title="ادامه مسیر ۲">
+      <div class="sheet">
+        <span class="eyebrow rv">ادامه‌ی مسیر · ۲</span>
+        <h2 class="h2 rv" style="--i:1">قدم‌های بعدی</h2>
+        <div class="grid g3">
+          <div class="card rv" style="--i:2"><p class="row-title">سفارش مجدد</p><p class="body">بازرگان سفارش قبلی را با همان محل بار و سطح تحویل دوباره ثبت کند و ملوان قبلی را دعوت کند.</p></div>
+          <div class="card rv" style="--i:3"><p class="row-title">خطوط ثابت</p><p class="body">ملوانی که مسیر تکراری دارد، ظرفیت را یک بار به‌صورت الگوی تکرارشونده تعریف کند.</p></div>
+          <div class="card rv" style="--i:4"><p class="row-title">برآورد هزینه‌ی کامل</p><p class="body">با ورود داده‌ی رسمی تعرفه، جمع آفر و عوارض گمرکی کنار هم دیده شود.</p></div>
+          <div class="card rv" style="--i:5"><p class="row-title">بیمه‌ی کامل‌تر</p><p class="body">نرخ از چند بیمه‌گر، بیمه‌ی لنج، ثبت خسارت و اتصال خودکار به بیمه‌گرها.</p></div>
+          <div class="card rv" style="--i:6"><p class="row-title">پیامک و اپ موبایل</p><p class="body">اعلان «نوبت شما» به پیامک برسد؛ بعد نسخه‌ی موبایل، اول به‌صورت وب‌اپ نصب‌پذیر.</p></div>
+          <div class="card rv" style="--i:7"><p class="row-title">تأمین مالی (بلندمدت)</p><p class="body">سابقه‌ی سفارش‌ها می‌تواند با شریک مالی به سرمایه‌ی در گردش تبدیل شود. در درآمد نزدیک‌مدت حساب نشده.</p></div>
         </div>
       </div>
     </section>
 
   </main>
 
+  <div class="more" id="more" aria-hidden="true"><span><svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="m6 9 6 6 6-6"/></svg>ادامه‌ی این اسلاید</span></div>
   <footer class="foot">
     <button class="nav" id="prev" type="button" aria-label="اسلاید قبلی"><svg class="i" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
     <div class="prog">
@@ -505,7 +588,7 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
       slides=[].slice.call(track.querySelectorAll('.slide')),
       prev=document.getElementById('prev'), next=document.getElementById('next'),
       count=document.getElementById('count'), rail=document.getElementById('rail'),
-      crumb=document.getElementById('crumb'), dots=document.getElementById('dots'),
+      crumb=document.getElementById('crumb'), more=document.getElementById('more'), dots=document.getElementById('dots'),
       reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, cur=0, target=0, settle=0;
   var FA='۰۱۲۳۴۵۶۷۸۹', fa=function(n){return String(n).replace(/\d/g,function(d){return FA[d]})};
 
@@ -539,8 +622,13 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
     rail.style.transform='scaleX('+((i+1)/slides.length)+')';
     crumb.textContent=slides[i].dataset.title;
     prev.disabled=i===0; next.disabled=i===slides.length-1;
-    slides[i].scrollTop=0;
+    slides[i].scrollTop=0; hint();
   }
+  function hint(){
+    var s=slides[cur];
+    more.classList.toggle('on', s.scrollHeight-s.clientHeight>24 && s.scrollTop<8);
+  }
+  slides.forEach(function(s){s.addEventListener('scroll',hint,{passive:true})});
   var raf=0;
   track.addEventListener('scroll',function(){
     cancelAnimationFrame(raf);
@@ -552,7 +640,7 @@ html.js .slide:not(.on) .rv{opacity:0;transform:translateY(8px)}
   },{passive:true});
   prev.addEventListener('click',function(){go(target-1)});
   next.addEventListener('click',function(){go(target+1)});
-  addEventListener('resize',function(){track.scrollTo({left:-cur*width(),behavior:'auto'})});
+  addEventListener('resize',function(){hint();track.scrollTo({left:-cur*width(),behavior:'auto'})});
 
   /* keys: RTL, so left = forward */
   addEventListener('keydown',function(e){
